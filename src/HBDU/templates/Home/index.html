@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>HBDU - (Happy BirthDay U)</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='Home/css/style.css') }}">
+    </head>
+    <body>
+        <form autocomplete='off' class='form' action='/v1/say_happy' method='post'>
+            <div class='control'>
+                <h1>
+                Give me a NAME!
+                </h1>
+            </div>
+            <div class='control block-cube block-input'>
+                <input name='username' placeholder='Name' type='text'>
+                <div class='bg-top'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                <div class='bg-inner'></div>
+                </div>
+            </div>
+            <div class='control block-cube block-input'>
+                <input name='author' placeholder='You name' type='text'>
+                <div class='bg-top'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                <div class='bg-inner'></div>
+                </div>
+            </div>
+            <div class='btn block-cube block-cube-hover'>
+                <div class='bg-top'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='bg-right'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='bg'>
+                <div class='bg-inner'></div>
+                </div>
+                <div class='text'>
+                    <input type='submit' value='GO!' class='btn block-cube block-cube-hover'>
+                </div>
+            </button>
+            <div class='credits'>
+                <a href='https://codepen.io/marko-zub/' target='_blank'>
+                My other codepens
+                </a>
+            </div>
+            </form>
+    </body>
+</html>
