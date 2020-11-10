@@ -4,11 +4,21 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='Home/css/style.css') }}">
     </head>
     <body>
-        <form autocomplete='off' class='form' action='/v1/say_happy' method='post'>
+        <center>
             <div class='control'>
                 <h1>
                 Give me a NAME!
                 </h1>
+            </div>
+        </center>
+        <form autocomplete='off' class='form' action='/v1/say_happy' method='post'>
+            <div class='box'>
+                <select id="theme" name="theme">
+                    <option value="Birthday_1">Birthday 1</option>
+                    <option value="Birthday_2">Birthday 2</option>
+                    <option value="Birthday_3">Birthday 3</option>
+                    <option value="Birthday_4">Birthday 4</option>
+                </select>
             </div>
             <div class='control block-cube block-input'>
                 <input name='name' placeholder='Name' type='text'>
@@ -47,7 +57,6 @@
                 <div class='text'>
                     <input type='submit' value='GO!' class='btn block-cube block-cube-hover'>
                 </div>
-            </button>
             <div class='credits'>
                 <a href='https://codepen.io/marko-zub/' target='_blank'>
                 My other codepens
