@@ -850,9 +850,19 @@
                 
             </svg>
             <center style="color: white;font-family: 'monospace';padding: 10px;height: 50px;position: absolute;margin-top: -75px;margin-left: 80px;top: 50%;left: 50%;">
-                <h2>HAPPY BIRTHDAY, NAME!</h2>
-                <h4>with &hearts; from NAME<h4>
+                <h2>HAPPY BIRTHDAY, {{ name }}!</h2>
+                <h4>with &hearts; from {{ author }}<h4>
+                <a href="#" onclick="copyToClipboard()">Copy the link</a>
                 created by HBDU
             </center>
+            <script>
+                function copyToClipboard() {
+                    navigator.clipboard.writeText(window.location.href).then(function() {
+                        console.log('Async: Copying to clipboard was successful!');
+                    }, function(err) {
+                        console.error('Async: Could not copy text: ', err);
+                    });
+                }
+            </script>
     </body>
 </html>
