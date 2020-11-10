@@ -4,9 +4,19 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='Birthday_3/css/style.css') }}">
     </head>
     <body>
+        <script>
+            function copyToClipboard() {
+                navigator.clipboard.writeText(window.location.href).then(function() {
+                    console.log('Async: Copying to clipboard was successful!');
+                }, function(err) {
+                    console.error('Async: Could not copy text: ', err);
+                });
+            }
+        </script>
         <center style="font-family: 'monospace';">
-            <h2>HAPPY BIRTHDAY, NAME!</h2>
-            <h4>with &hearts; from NAME</h4>
+            <h2>HAPPY BIRTHDAY, {{ name }}!</h2>
+            <h4>with &hearts; from {{ author }}</h4>
+            <a href="#" onclick="copyToClipboard()">Copy the link</a>
             created by HBDU
         </center>
         <svg id="sky_day" data-name="sky day" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1295.87 804.79">
