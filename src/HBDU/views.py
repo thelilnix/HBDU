@@ -19,9 +19,29 @@ def home():
 def say_happy():
     if (request.form.get("name", '') == ''
         or request.form.get("author", '') == ''
-        or request.form.get("template", '') == ''
+        or request.form.get("theme", '') == ''
             or request.form["theme"] not in THEMES):
         # Required parameters passed and `theme` passed correct
         return redirect(url_for("home"))
 
-    return redirect(f"/v1/themes/{request.form['theme']}")
+    theme = request.form['theme']
+    name = request.form['name']
+    author = request.form['author']
+
+    return redirect(
+        f"/v1/themes/{theme}/{name}/{author}"
+    )
+
+
+# Handling themes
+
+@app.route("/v1/themes/<theme>/<name>/<author>")
+def handle_theme(theme, name, author):
+    if theme not in THEMES:
+        return redirect(url_for("home"))
+
+    return render_template(
+        f"{theme}/index.html",
+        name=name,
+        author=author
+    )
