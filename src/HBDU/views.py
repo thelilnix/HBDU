@@ -12,7 +12,7 @@ THEMES = ["Birthday_1", "Birthday_2", "Birthday_3", "Birthday_4"]
 
 @app.route("/")
 def home():
-    return render_template("Home/index.html")
+    return render_template("Home/index.html", themes=THEMES)
 
 
 @app.route("/v1/say_happy", methods=['POST'])
