@@ -1,0 +1,6 @@
+- [ ] HTTP 404 error
+- [ ] Security analizing and penetration testing
+- [ ] Write tests
+- [ ] Add requirements.txt
+- [ ] Github Actions
+- [ ] Complete README.md
