@@ -4,6 +4,15 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='Birthday_1/css/style.css') }}">
     </head>
     <body>
+        <script>
+            function copyToClipboard() {
+                navigator.clipboard.writeText(window.location.href).then(function() {
+                    console.log('Async: Copying to clipboard was successful!');
+                }, function(err) {
+                    console.error('Async: Could not copy text: ', err);
+                });
+            }
+        </script>
           <div class="arrow arrow--top">
             <svg xmlns="http://www.w3.org/2000/svg" width="270.11" height="649.9" overflow="visible">
             <style>
@@ -47,14 +56,14 @@
         </div>
         <div class="main">
             <div class="main__text-wrapper">
-            <h2 class="main__title">HAPPY BIRTHDAY, NAME!</h2>
-            <h3>with &hearts; from Name</h3>
+            <h2 class="main__title">HAPPY BIRTHDAY, {{ name }}!</h2>
+            <h3>with &hearts; from {{ author }}</h3>
+            <a href="#" onclick="copyToClipboard()">Copy the link</a>
             <h5>created by HBDU</h5>
             <svg xmlns="http://www.w3.org/2000/svg" class="dotted-circle" width="352" height="352" overflow="visible">
         <circle cx="176" cy="176" r="174" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="12.921,11.9271"/>
         </svg>
             </div>
         </div>
-
     </body>
 </html>
