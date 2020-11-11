@@ -54,6 +54,11 @@ or
 (ROOT_PROJECT_DIR)$ flask run
 ```
 
+or using `docker`
+```shell
+(ROOT_PROJECT_DIR)$ ./run_docker.sh # 127.0.0.1:PORT
+```
+
 ## Contributing
 
 I will be glad! Open an issue first or work on your assigned issue.
