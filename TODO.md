@@ -2,6 +2,6 @@
 - [ ] Security analizing and penetration testing
 - [x] Write tests
 - [ ] Add requirements.txt
-- [ ] run.sh
+- [x] run.sh
 - [ ] Github Actions
 - [ ] Complete README.md
