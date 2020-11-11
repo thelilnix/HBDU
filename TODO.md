@@ -5,4 +5,4 @@
 - [x] run.sh
 - [x] Pylint
 - [x] Github Actions
-- [ ] Complete README.md
+- [x] Complete README.md
