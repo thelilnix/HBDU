@@ -45,3 +45,8 @@ def handle_theme(theme, name, author):
         name=name,
         author=author
     )
+
+
+@app.errorhandler(404)
+def error_404(err):
+    return render_template("Error/404.html"), 404
