@@ -3,5 +3,6 @@
 - [x] Write tests
 - [x] Add requirements.txt
 - [x] run.sh
-- [ ] Github Actions
+- [x] Pylint
+- [x] Github Actions
 - [ ] Complete README.md

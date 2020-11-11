@@ -42,3 +42,5 @@ jobs:
       - name: Linting using pylint
         run: |
           pylint src/HBDU/__init__.py || pylint-exit $?
+          pylint src/HBDU/views.py || pylint-exit $?
+          pylint src/HBDU/models.py || pylint-exit $?
