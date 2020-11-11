@@ -1,7 +1,7 @@
 - [x] HTTP 404 error
 - [ ] Security analizing and penetration testing
 - [x] Write tests
-- [ ] Add requirements.txt
+- [x] Add requirements.txt
 - [x] run.sh
 - [ ] Github Actions
 - [ ] Complete README.md
