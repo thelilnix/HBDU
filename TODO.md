@@ -6,3 +6,4 @@
 - [x] Pylint
 - [x] Github Actions
 - [x] Complete README.md
+- [ ] Dockerize
